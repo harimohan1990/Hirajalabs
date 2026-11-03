@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   GraduationCap, 
   CheckCircle, 
@@ -18,6 +18,18 @@ import { ACADEMY_COURSES, getWhatsAppUrl } from '../data/companyData';
 
 export default function Academy() {
   const [selectedCourse, setSelectedCourse] = useState(null);
+
+  // Lock body scroll when modal is open
+  useEffect(() => {
+    if (selectedCourse) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedCourse]);
 
   const academyFeatures = [
     {
