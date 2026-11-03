@@ -33,7 +33,7 @@ export default function WhatsAppButton() {
           
           <div className="tooltip-header">
             <span className="online-beacon"></span>
-            <span className="tooltip-title">Harija Labs Support</span>
+            <span className="tooltip-title">Harija Labs AI Support</span>
           </div>
 
           <p className="tooltip-msg">

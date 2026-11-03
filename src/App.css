@@ -2598,11 +2598,12 @@
 .floating-whatsapp-wrapper {
   position: fixed;
   bottom: clamp(1.25rem, 3vw, 2rem);
-  right: clamp(1.25rem, 3vw, 2rem);
+  left: clamp(1.25rem, 3vw, 2rem);
+  right: auto;
   z-index: 990;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .floating-wa-btn {
@@ -2745,7 +2746,8 @@
 .tooltip-tail {
   position: absolute;
   bottom: -6px;
-  right: 22px;
+  left: 22px;
+  right: auto;
   width: 12px;
   height: 12px;
   background: #0B1126;
@@ -2757,14 +2759,16 @@
 @media (max-width: 640px) {
   .floating-whatsapp-wrapper {
     bottom: 1rem;
-    right: 1rem;
+    left: 1rem;
+    right: auto;
   }
   .whatsapp-tooltip-card {
     width: min(280px, calc(100vw - 2rem));
     padding: 0.9rem 1rem;
   }
   .tooltip-tail {
-    right: 18px;
+    left: 18px;
+    right: auto;
   }
 }
 
