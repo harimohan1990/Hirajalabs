@@ -28,23 +28,29 @@ export default function WhatsAppButton() {
             }}
             aria-label="Dismiss message preview"
           >
-            <X size={14} />
+            <X size={15} />
           </button>
+          
           <div className="tooltip-header">
             <span className="online-beacon"></span>
-            <strong>Harija Labs AI Support</strong>
+            <span className="tooltip-title">Harija Labs Support</span>
           </div>
+
           <p className="tooltip-msg">
-            Hi there! Need help with an AI Agent or Harija Academy course? Chat with us live!
+            Need help with custom AI Agents or Harija Academy courses? Chat with our team!
           </p>
+
           <a
             href={getWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="tooltip-cta-link"
+            className="tooltip-cta-pill"
           >
-            Start WhatsApp Chat &rarr;
+            <MessageSquare size={14} />
+            <span>Start WhatsApp Chat</span>
           </a>
+
+          <div className="tooltip-tail"></div>
         </div>
       )}
 
